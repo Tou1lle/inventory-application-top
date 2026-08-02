@@ -7,5 +7,91 @@
   </head>
   <body>
     <%- include("partials/navigationTop") %>
+    <main>
+      <div>
+        <h1>Your Gaming Inventory</h1>
+        <p>
+          Here you can add, view (maybe even delete or update) our Gaming
+          inventory. You can view pages from publishers to developers and
+          finally to games. To add any of those, just click on
+          <a href="add-new">Add New</a>.
+        </p>
+      </div>
+      <div>
+        <a href="/games">
+          <span>Games</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="64"
+            height="64"
+            viewBox="0 0 24 24"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <g fill="none">
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16.031 3.887H7.97a5.22 5.22 0 0 0-5.219 5.22v8.265c0 2.075 2.533 3.085 3.962 1.581l2.976-3.134h4.624l2.875 3.46c1.374 1.654 4.063.682 4.063-1.467V9.106a5.22 5.22 0 0 0-5.219-5.219M8.138 8.39v4m-2-2h4"
+              />
+              <circle cx="14.662" cy="9.39" r="1" fill="currentColor" />
+              <circle cx="16.862" cy="11.59" r="1" fill="currentColor" />
+            </g>
+          </svg>
+        </a>
+        <a href="/publishers">
+          <span>Publishers</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="64"
+            height="64"
+            viewBox="0 0 20 20"
+          >
+            <path d="M0 0h20v20H0z" fill="none" />
+            <path
+              fill="currentColor"
+              d="M9.967 8.193L5 13h3v6h4v-6h3zM18 1H2C.9 1 0 1.9 0 3v12c0 1.1.9 2 2 2h4v-2H2V6h16v9h-4v2h4c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2M2.5 4.25a.75.75 0 1 1 0-1.5a.75.75 0 0 1 0 1.5m2 0a.75.75 0 1 1 0-1.5a.75.75 0 0 1 0 1.5M18 4H6V3h12.019z"
+            />
+          </svg>
+        </a>
+        <a href="/developers">
+          <span>Developers</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="64"
+            height="64"
+            viewBox="0 0 16 16"
+          >
+            <path d="M0 0h16v16H0z" fill="none" />
+            <path
+              fill="currentColor"
+              d="M1 3.5A2.5 2.5 0 0 1 3.5 1h7A2.5 2.5 0 0 1 13 3.5v1.53c-.33-.04-.67-.04-1 0V5H2v5.5c0 .83.67 1.5 1.5 1.5h2.95l-.72.72c-.09.09-.17.18-.24.28H3.5A2.5 2.5 0 0 1 1 10.5zm7.93 3.22l-.58-.58c-.2-.2-.51-.2-.71 0s-.2.51 0 .71l.74.74q.21-.465.54-.87zM2 4h10v-.5c0-.83-.67-1.5-1.5-1.5h-7C2.67 2 2 2.67 2 3.5zm4.35 2.85c.2-.2.2-.51 0-.71s-.51-.2-.71 0l-2 2c-.2.2-.2.51 0 .71l2 2c.2.2.51.2.71 0s.2-.51 0-.71L4.7 8.49l1.65-1.65zm6.54-.83c.37.04.47.48.21.74l-.98.98c-.59.59-.59 1.54 0 2.13s1.54.59 2.13 0l.98-.98c.26-.26.7-.16.74.21a3.525 3.525 0 0 1-4.68 3.73l-2.73 2.73c-.59.59-1.54.59-2.13 0s-.59-1.54 0-2.13l2.73-2.73c-.44-1.24-.17-2.68.83-3.67c.79-.79 1.87-1.13 2.9-1.01"
+            />
+          </svg>
+        </a>
+        <a href="/add-new">
+          <span>Add New</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="64"
+            height="64"
+            viewBox="0 0 16 16"
+          >
+            <path d="M0 0h16v16H0z" fill="none" />
+            <path
+              fill="currentColor"
+              d="M7.5 4a.5.5 0 0 1 .5.5V7h2.5a.5.5 0 0 1 0 1H8v2.5a.5.5 0 0 1-1 0V8H4.5a.5.5 0 0 1 0-1H7V4.5a.5.5 0 0 1 .5-.5"
+            />
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M0 6.4c0-2.24 0-3.36.436-4.22A4.03 4.03 0 0 1 2.186.43c.856-.436 1.98-.436 4.22-.436h2.2c2.24 0 3.36 0 4.22.436c.753.383 1.36.995 1.75 1.75c.436.856.436 1.98.436 4.22v2.2c0 2.24 0 3.36-.436 4.22a4.03 4.03 0 0 1-1.75 1.75c-.856.436-1.98.436-4.22.436h-2.2c-2.24 0-3.36 0-4.22-.436a4.03 4.03 0 0 1-1.75-1.75C0 11.964 0 10.84 0 8.6zM6.4 1h2.2c1.14 0 1.93 0 2.55.051c.605.05.953.142 1.22.276a3.02 3.02 0 0 1 1.31 1.31c.134.263.226.611.276 1.22c.05.617.051 1.41.051 2.55v2.2c0 1.14 0 1.93-.051 2.55c-.05.605-.142.953-.276 1.22a3 3 0 0 1-1.31 1.31c-.263.134-.611.226-1.22.276c-.617.05-1.41.051-2.55.051H6.4c-1.14 0-1.93 0-2.55-.05c-.605-.05-.953-.143-1.22-.277a3 3 0 0 1-1.31-1.31c-.134-.263-.226-.61-.276-1.22c-.05-.617-.051-1.41-.051-2.55v-2.2c0-1.14 0-1.93.051-2.55c.05-.605.142-.953.276-1.22a3.02 3.02 0 0 1 1.31-1.31c.263-.134.611-.226 1.22-.276C4.467 1.001 5.26 1 6.4 1"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
+      </div>
+    </main>
   </body>
 </html>
