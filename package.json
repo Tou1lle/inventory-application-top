@@ -1,0 +1,25 @@
+{
+  "name": "inventory-application-top",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tou1lle/inventory-application-top.git"
+  },
+  "keywords": [],
+  "author": "Tuan Ha <hatuan@email.cz>",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Tou1lle/inventory-application-top/issues"
+  },
+  "homepage": "https://github.com/Tou1lle/inventory-application-top#readme",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1"
+  }
+}
