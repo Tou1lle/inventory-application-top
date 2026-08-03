@@ -9,4 +9,4 @@ For this project I created a database schema in [dbdiagram](https://dbdiagram.io
 but similar syntax to SQL DBML.
 
 ### Image of DB Schema
-![Database Schema](/docs/inventory-application-database.png)
+![Database Schema](/docs/inventory-app-schema.png)
