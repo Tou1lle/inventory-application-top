@@ -58,12 +58,23 @@
       </form>
       <div>
         <% if (!locals.data) { %>
-          <h3>No data for this section!</h3>
+          <h3>We are sorry, an error must have occured.</h3>
         <% } else { %>
           <div>
             <h3> <%= locals.texts.header %> </h3>
             <p> <%= locals.texts.paragraph %> </p>
           </div>
+            <% if (locals.data.companies.length === 0) { %>
+              <h3>No data in this section!</h3>
+            <% } else { %>
+              <ul>
+                <% locals.data.companies.forEach(company => { %>
+                  <li><a href="/companies/<%= company.id %>">
+                    <h4> <%= company.name %> </h4>
+                  </a></li>
+                <% }) %>
+              </ul>
+            <% } %>
         <% } %>
       </div>
     </div>
