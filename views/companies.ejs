@@ -33,12 +33,30 @@
     </div>
 
     <div>
+      <form action="/companies" method="get">
+        <button type="submit" name="filter" value="all">
+          <span>All Companies:</span>
+          &nbsp;
+          <span><%= locals.counts.all %></span>
+        </button>
+        <button type="submit" name="filter" value="developers">
+          <span>Developers:</span>
+          &nbsp;
+          <span><%= locals.counts.dev %></span>
+        </button>
+        <button type="submit" name="filter" value="publishers">
+          <span>Publishers:</span>
+          &nbsp;
+          <span><%= locals.counts.pub %></span>
+        </button>
+        <button type="submit" name="filter" value="devpub">
+          <span>Developer+Publisher:</span>
+          &nbsp;
+          <span><%= locals.counts.devpub %></span>
+        </button>
+      </form>
       <div>
-        <h2>Developers</h2>
-      </div>
-      <div></div>
-      <div>
-        <h2>Publishers</h2>
+        Companies
       </div>
     </div>
   </main>

@@ -1,10 +1,8 @@
 const { Router } = require("express");
+const controller = require("./../controllers/companiesController")
 const router = Router();
 
-router.get("/", (req, res) => {
-  res.render("companies", {
-    title: "Game Companies"
-  });
-});
+
+router.get("/", controller.companiesGetAll);
 
 module.exports = router;
