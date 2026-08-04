@@ -4,5 +4,6 @@ const router = Router();
 
 
 router.get("/", controller.companiesGet);
+router.get("/:id", controller.companyGet);
 
 module.exports = router;

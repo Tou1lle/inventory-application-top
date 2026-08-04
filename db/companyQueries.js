@@ -58,10 +58,16 @@ async function getCompanies(filter) {
   }
 }
 
+async function getCompany(id) {
+  const result = await pool.query("SELECT * FROM companies WHERE id = $1", [id]);
+  return result.rows[0];
+}
+
 module.exports = {
   getCompanies,
   getAllCount,
   getDevCount,
   getPubCount,
-  getDevPubCount
+  getDevPubCount,
+  getCompany
 }

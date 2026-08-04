@@ -1,4 +1,4 @@
-const db = require("./../db/queries");
+const db = require("../db/companyQueries");
 
 const pageContent = {
   all: {
@@ -42,6 +42,13 @@ async function companiesGet(req, res) {
   });
 }
 
+async function companyGet(req, res) {
+  const id = req.params.id;
+  const company = await db.getCompany(id);
+  res.send(company);
+}
+
 module.exports = {
-  companiesGet
+  companiesGet,
+  companyGet
 }
