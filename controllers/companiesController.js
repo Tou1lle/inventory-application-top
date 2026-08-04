@@ -1,13 +1,16 @@
 const db = require("./../db/queries");
 
-async function companiesGetAll(req, res) {
-  const result = await db.getAllCompanies();
+async function companiesGet(req, res) {
+  const filter = req.query.filter || "all";
+  const result = await db.getCompanies(filter);
   const [countAll, countDev, countPub, countDevPub] = await Promise.all([
     db.getAllCount(),
     db.getDevCount(),
     db.getPubCount(),
     db.getDevPubCount()
   ]);
+
+  console.log(result);
   
   res.render("companies", {
     title: "Game Companies",
@@ -16,10 +19,11 @@ async function companiesGetAll(req, res) {
       dev: countDev,
       pub: countPub,
       devpub: countDevPub
-    }
+    },
+    data: result
   });
 }
 
 module.exports = {
-  companiesGetAll
+  companiesGet
 }

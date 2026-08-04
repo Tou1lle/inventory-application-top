@@ -3,6 +3,6 @@ const controller = require("./../controllers/companiesController")
 const router = Router();
 
 
-router.get("/", controller.companiesGetAll);
+router.get("/", controller.companiesGet);
 
 module.exports = router;

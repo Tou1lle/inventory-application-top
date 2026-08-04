@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="scripts/companiesScript.js" defer></script>
   <title><%= locals.title %></title>
 </head>
 <body>
@@ -34,22 +35,22 @@
 
     <div>
       <form action="/companies" method="get">
-        <button type="submit" name="filter" value="all">
+        <button type="submit" name="filter" value="all" id="company-all">
           <span>All Companies:</span>
           &nbsp;
           <span><%= locals.counts.all %></span>
         </button>
-        <button type="submit" name="filter" value="developers">
+        <button type="submit" name="filter" value="dev" id="company-dev">
           <span>Developers:</span>
           &nbsp;
           <span><%= locals.counts.dev %></span>
         </button>
-        <button type="submit" name="filter" value="publishers">
+        <button type="submit" name="filter" value="pub" id="company-pub">
           <span>Publishers:</span>
           &nbsp;
           <span><%= locals.counts.pub %></span>
         </button>
-        <button type="submit" name="filter" value="devpub">
+        <button type="submit" name="filter" value="devpub" id="company-devpub">
           <span>Developer+Publisher:</span>
           &nbsp;
           <span><%= locals.counts.devpub %></span>

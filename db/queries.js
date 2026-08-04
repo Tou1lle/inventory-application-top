@@ -27,16 +27,39 @@ async function getDevPubCount() {
   return count;
 }
 
-async function getAllCompanies() {
-  const result = await pool.query("SELECT * FROM companies");
+async function runCompaniesSearch(filter) {
+  switch (filter) {
+    case "all":
+      return await pool.query("SELECT * FROM companies");
+      break;
+    case "dev":
+      return await pool.query("SELECT * FROM companies WHERE is_developer = true");
+      break;
+    case "pub":
+      return await pool.query("SELECT * FROM companies WHERE is_publisher = true");
+      break;
+    case "devpub":
+      return await pool.query("SELECT * FROM companies WHERE is_developer = true AND is_publisher = true");
+      break
+    default:
+      return null;
+      break;
+  }
+}
+
+async function getCompanies(filter) {
+  const result = await runCompaniesSearch(filter);
+  if (!result) {
+    return null;
+  }
   return {
     count: result.rowCount,
-    data: result.rows
+    companies: result.rows
   }
 }
 
 module.exports = {
-  getAllCompanies,
+  getCompanies,
   getAllCount,
   getDevCount,
   getPubCount,
