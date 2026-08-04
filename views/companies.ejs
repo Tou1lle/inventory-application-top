@@ -57,7 +57,14 @@
         </button>
       </form>
       <div>
-        Companies
+        <% if (!locals.data) { %>
+          <h3>No data for this section!</h3>
+        <% } else { %>
+          <div>
+            <h3> <%= locals.texts.header %> </h3>
+            <p> <%= locals.texts.paragraph %> </p>
+          </div>
+        <% } %>
       </div>
     </div>
   </main>
