@@ -45,7 +45,8 @@ async function companiesGet(req, res) {
 async function companyGet(req, res) {
   const id = req.params.id;
   const company = await db.getCompany(id);
-  res.send(company);
+  console.log(company);
+  res.render("company", { ...company });
 }
 
 module.exports = {

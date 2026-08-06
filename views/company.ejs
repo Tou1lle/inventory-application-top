@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> <%= locals.name %> </title>
+</head>
+<body>
+  
+  <%- include("partials/navigationTop") %>
+
+  <div>
+    <a href="/companies">Go back</a>
+    <h1> <%= locals.name %> </h1>
+  </div>
+  <main>
+    <div>
+      <div>
+        <img src="<%= locals.image_file || "https://placehold.co/600x400" %>" alt="Logo of company">
+      </div>
+      <div>
+        <h2>About <%= locals.name %></h2>
+        <p> <%= locals.info %> </p>
+        <div>
+          <div>
+            <p>Founded Year:</p>
+            <p> <%= locals.founded_year %> </p>
+          </div>
+          <div>
+            <p>Country:</p>
+            <p> <%= locals.country %> </p>
+          </div>
+          <div>
+            <a href="<%= locals.website %>" target="_blank">Company Website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3>Games from <%= locals.name %></h3>
+    </div>
+  </main>
+
+  <%- include("partials/footer") %>
+
+</body>
+</html>
