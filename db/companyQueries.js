@@ -63,11 +63,18 @@ async function getCompany(id) {
   return result.rows[0];
 }
 
+async function getCompanyGames(id) {
+  const result = await pool.query("SELECT * FROM games WHERE developer_id = $1 OR publisher_id = $1", [id]);
+  const games = result.rows;
+  return games;
+}
+
 module.exports = {
   getCompanies,
   getAllCount,
   getDevCount,
   getPubCount,
   getDevPubCount,
-  getCompany
+  getCompany,
+  getCompanyGames
 }

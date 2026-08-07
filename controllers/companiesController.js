@@ -44,9 +44,8 @@ async function companiesGet(req, res) {
 
 async function companyGet(req, res) {
   const id = req.params.id;
-  const company = await db.getCompany(id);
-  console.log(company);
-  res.render("company", { ...company });
+  const [company, companyGames] = await Promise.all([db.getCompany(id), db.getCompanyGames(id)]);
+  res.render("company", { company: { ...company }, companyGames });
 }
 
 module.exports = {
