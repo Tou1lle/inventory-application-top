@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("node:path");
 const indexRouter = require("./routes/indexRouter");
 const companiesRouter = require("./routes/companiesRouter");
+const gamesRouter = require("./routes/gamesRouter");
 const app = express();
 
 app.set("views", path.join(__dirname, "views"));
@@ -10,6 +11,7 @@ app.use(express.static("public"));
 
 app.use("/home", indexRouter);
 app.use("/companies", companiesRouter)
+app.use("/games", gamesRouter);
 app.get("/", (req, res) => {
   res.redirect("/home");
 })

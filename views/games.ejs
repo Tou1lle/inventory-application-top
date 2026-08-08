@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <%- include("partials/navigationTop") %>
+
+    <div>
+      <aside>
+
+      </aside>
+      <main>
+        <div>
+          <h1>Games Catalog</h1>
+        </div>
+        <div>
+          <% if (locals.games.length===0) { %>
+            <p>No games right now</p>
+            <% } else { %>
+              <ul>
+                <% locals.games.forEach(game=> { %>
+                  <li>
+                    <div>
+                      <a href="/games/<%= game.id %>">Game page</a>
+                      <div>
+                        <img src="<%= game.image_file || " https://placehold.co/300x450" %>" alt="Game poster">
+                      </div>
+                      <div>
+                        <div>
+                          <h2>
+                            <%= game.name %>
+                          </h2>
+                          <p>
+                            <%= game.release_date %>
+                          </p>
+                        </div>
+                        <div>
+                          <p>
+                            <%= game.description %>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <% }) %>
+              </ul>
+            <% } %>
+        </div>
+      </main>
+    </div>
+
+    <%- include("partials/footer") %>
+
+</body>
+
+</html>
